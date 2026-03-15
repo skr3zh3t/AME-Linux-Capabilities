@@ -1,0 +1,9 @@
+services:
+  ctf-java-caps:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - USER_FLAG=practice{java_reflection_rce}
+      - ROOT_FLAG=practice{linux_capabilities_abuse}
+    restart: unless-stopped
